@@ -6,6 +6,7 @@ import 'package:sellers_food_app/global/global.dart';
 import 'package:sellers_food_app/splash_screen/splash_screen.dart';
 import 'package:sellers_food_app/widgets/simple_app_bar.dart';
 import '../models/items.dart';
+import 'home_screen.dart';
 
 class ItemDetailsScreen extends StatefulWidget {
   final Items? model;
@@ -32,7 +33,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
         FirebaseFirestore.instance.collection("items").doc(itemID).delete();
 
         Navigator.push(context,
-            MaterialPageRoute(builder: ((context) => const SplashScreen())));
+            MaterialPageRoute(builder: ((context) => const HomeScreen())));
 
         Fluttertoast.showToast(msg: "Item Deleted");
       },
@@ -174,7 +175,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             ),
                           ),
                           Text(
-                            "\$" + widget.model!.price.toString(),
+                            "Rs" + widget.model!.price.toString(),
                             style: GoogleFonts.lato(
                               textStyle: const TextStyle(
                                 fontSize: 30,

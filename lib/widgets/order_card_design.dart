@@ -110,7 +110,7 @@ Widget placedOrderDesignWidget(
               ),
               const SizedBox(width: 10),
               const Text(
-                "\$ ",
+                "Rs ",
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.blue,

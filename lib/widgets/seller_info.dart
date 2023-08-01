@@ -123,10 +123,10 @@ class _SellerInfoState extends State<SellerInfo> {
                       Padding(
                         padding: const EdgeInsets.all(5),
                         child: Text(
-                          "\$" + sellerTotalEarnings.toString(),
+                          "Rs " + sellerTotalEarnings.toString(),
                           style: GoogleFonts.lato(
                             textStyle: TextStyle(
-                                fontSize: 25,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green.shade500),
                           ),
